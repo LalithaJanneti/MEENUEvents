@@ -586,9 +586,12 @@ function openVideoModal(id) {
 function renderContact() {
   const c = CITIES.find(c => c.id === currentCity);
   $('#contactAddress').textContent = c.address;
-  $('#contactPhone').textContent = c.phone;
-  $('#contactEmail').textContent = c.email;
-  $('#contactWhatsapp').textContent = c.phone;
+  $('#contactPhoneLink').textContent = c.phone;
+  $('#contactPhoneLink').href = `tel:${c.phone}`;
+  $('#contactEmailLink').textContent = c.email;
+  $('#contactEmailLink').href = `mailto:${c.email}`;
+  $('#contactWhatsappLink').textContent = c.whatsapp;
+  $('#contactWhatsappLink').href = `https://wa.me/${c.whatsapp}`;
   $('#contactMap').src = c.map;
   $('#floatWhatsapp').href = `https://wa.me/${c.whatsapp}`;
   $('#contactTitle').textContent = `Visit Our ${c.name} Studio`;
@@ -596,10 +599,10 @@ function renderContact() {
 
   // social row
   $('#socialRow').innerHTML = `
-    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-    <a href="https://wa.me/${c.whatsapp}" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="https://wa.me/${c.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
   `;
 }
 
@@ -768,6 +771,22 @@ async function trackConsultationClick(source, label = 'Book Consultation', page 
   }
 }
 
+function showPageLoader() {
+  const loader = $('#pageLoader');
+  if (!loader) return;
+  document.documentElement.classList.add('page-no-smooth');
+  document.body.classList.add('page-loading');
+  loader.classList.add('visible');
+}
+
+function hidePageLoader() {
+  const loader = $('#pageLoader');
+  if (!loader) return;
+  loader.classList.remove('visible');
+  document.body.classList.remove('page-loading');
+  document.documentElement.classList.remove('page-no-smooth');
+}
+
 function attachSmoothScroll() {
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener('click', async (e) => {
@@ -776,12 +795,19 @@ function attachSmoothScroll() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        // close offcanvas if open
+        const label = a.textContent.trim().replace(/\s+/g, ' ');
+        showPageLoader(`MEENUEvents loading ${label}...`);
+
         const off = document.getElementById('navOffcanvas');
         if (off && off.classList.contains('show')) {
           bootstrap.Offcanvas.getInstance(off).hide();
         }
+
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'auto' });
+          history.replaceState(null, '', href);
+          setTimeout(hidePageLoader, 320);
+        }, 140);
 
         if (a.textContent.includes('Book Consultation')) {
           await trackConsultationClick('nav_link', a.textContent.trim(), 'home');

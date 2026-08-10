@@ -22,6 +22,11 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body data-event="wedding">
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="loader-title">MEENUEvents</div>
+    </div>
+  </div>
 
   <!-- ============ NAVBAR ============ -->
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
@@ -328,6 +333,7 @@
   <!-- ============ BOOK CONSULTATION ============ -->
   <section id="booking" class="section booking-section">
     <div class="container">
+
       <div class="row g-4 align-items-center">
         <div class="col-lg-5" data-aos="fade-right">
           <span class="eyebrow">Book Consultation</span>
@@ -409,21 +415,21 @@
               <span class="contact-icon"><i class="bi bi-telephone-fill"></i></span>
               <div>
                 <strong>Phone</strong>
-                <p id="contactPhone">8977737787</p>
+                <p><a id="contactPhoneLink" href="tel:+918977737787"></a></p>
               </div>
             </div>
             <div class="contact-item glass">
               <span class="contact-icon"><i class="bi bi-envelope-fill"></i></span>
               <div>
                 <strong>Email</strong>
-                <p id="contactEmail">Meenuevents@devyora.co</p>
+                <p><a id="contactEmailLink" href="mailto:Meenuevents@devyora.co"></a></p>
               </div>
             </div>
             <div class="contact-item glass">
               <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
               <div>
                 <strong>WhatsApp</strong>
-                <p id="contactWhatsapp">8977737787</p>
+                <p><a id="contactWhatsappLink" href="https://wa.me/918977737787"></a></p>
               </div>
             </div>
           </div>
