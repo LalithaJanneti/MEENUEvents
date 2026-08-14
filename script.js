@@ -414,7 +414,8 @@ function renderGallery() {
 }
 
 function CITY_NAME(id) {
-  return CITIES.find(c => c.id === id).name;
+  const city = CITIES.find(c => c.id === id);
+  return city ? city.name : '';
 }
 
 /* ---------------------------------------------------------

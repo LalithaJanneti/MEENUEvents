@@ -909,17 +909,6 @@ section.section { padding: 96px 0; }
   .booking-form { padding: 22px; }
   .gallery-img, .venue-img, .theme-img { height: 220px; }
 }
-  section.section { padding: 56px 0; }
-  .hero-controls { padding: 16px; }
-  .hero-title { font-size: 2rem; }
-  .stat-number { font-size: 1.9rem; }
-  .testimonial-card { padding: 28px 20px; }
-  .testimonial-text { font-size: 1.02rem; }
-  .video-card { flex-basis: 280px; height: 180px; }
-  .map-wrap { height: 320px; }
-  .booking-form { padding: 22px; }
-  .gallery-img, .venue-img, .theme-img { height: 220px; }
-}
 @media (max-width: 767px) {
   #themesCarousel .carousel-item .col-md-4:nth-child(-n+2) {
     display: block;
