@@ -20,7 +20,7 @@ const EVENTS = [
   { id: 'babyshower',  name: '🍼 Baby Shower' },
   { id: 'naming',      name: '👶 Naming Ceremony' },
   { id: 'anniversary', name: '💞 Anniversary' },
-  { id: 'engagement',  name: '💍 Engagement' },
+  { id: 'halfsaree',   name: '💃 Half Saree Function' },
   { id: 'corporate',   name: '💼 Corporate Event' },
   { id: 'housewarming',name: '🏡 Housewarming' },
 ];
@@ -59,9 +59,9 @@ const EVENT_CONTENT = {
     themesTitle: 'Birthday Themes For Every Age',
     themes: [
       { name: 'Princess Party',   img: 'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Superhero Party',   img: 'https://images.pexels.com/photos/2076630/pexels-photo-2076630.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Superhero Party',   img: 'https://images.pexels.com/photos/10336829/pexels-photo-10336829.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Unicorn Dream',    img: 'https://images.pexels.com/photos/1779415/pexels-photo-1779415.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Jungle Safari',     img: 'https://images.pexels.com/photos/2076629/pexels-photo-2076629.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Jungle Safari',     img: 'https://images.pexels.com/photos/14160871/pexels-photo-14160871.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Baby Boss Theme',   img: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Milestone Birthday',img: 'https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
@@ -76,10 +76,10 @@ const EVENT_CONTENT = {
     themesLabel: 'Baby Shower Themes',
     themesTitle: 'Baby Shower Themes',
     themes: [
-      { name: 'Pastel Clouds',     img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Twinkle Little Star',img: 'https://images.pexels.com/photos/235554/pexels-photo-235554.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Pastel Clouds',     img: 'https://images.pexels.com/photos/35204091/pexels-photo-35204091.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Twinkle Little Star',img: 'https://images.pexels.com/photos/34154245/pexels-photo-34154245.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Lavender Dreams',   img: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Baby In Bloom',     img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Baby In Bloom',     img: 'https://images.pexels.com/photos/30691631/pexels-photo-30691631.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
   },
   naming: {
@@ -92,10 +92,10 @@ const EVENT_CONTENT = {
     themesLabel: 'Naming Ceremony Themes',
     themesTitle: 'Naming Ceremony Themes',
     themes: [
-      { name: 'Traditional Ceremony', img: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Royal Baby Theme',       img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Minimal Pastel',        img: 'https://images.pexels.com/photos/235554/pexels-photo-235554.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Sky Blue Cradle',       img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Traditional Naming Ceremony', img: 'https://images.pexels.com/photos/35040453/pexels-photo-35040453.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Royal Baby Cradle Ceremony', img: 'https://images.pexels.com/photos/19794717/pexels-photo-19794717.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Minimal Pastel Ceremony', img: 'https://images.pexels.com/photos/12116207/pexels-photo-12116207.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Sky Blue Cradle Ceremony', img: 'https://images.pexels.com/photos/30665062/pexels-photo-30665062.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
   },
   anniversary: {
@@ -114,20 +114,19 @@ const EVENT_CONTENT = {
       { name: 'Beachside Celebration',img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
   },
-  engagement: {
-    eyebrow: 'Engagement Event Planning',
-    heroTitle: 'The First "Yes" Deserves A Beautiful Stage',
-    heroSubtitle: 'Rose-and-champagne decor, ring ceremonies and a picture-perfect beginning.',
-    galleryLabel: 'Previous Engagements',
-    galleryTitle: 'Where Two Families Meet',
-    galleryDesc: 'Intimate ring ceremonies and grand engagement galas.',
-    themesLabel: 'Engagement Themes',
-    themesTitle: 'Engagement Themes',
+  halfsaree: {
+    eyebrow: 'Half Saree Function Planning',
+    heroTitle: 'Graceful Half Saree Celebrations for the Next Generation',
+    heroSubtitle: 'Elegant decor, family traditions and vibrant rituals crafted for your special half saree ceremony.',
+    galleryLabel: 'Half Saree Celebrations',
+    galleryTitle: 'Memorable Half Saree Moments',
+    galleryDesc: 'From traditional blessings to festive family gatherings, every detail is designed with charm.',
+    themesLabel: 'Half Saree Themes',
+    themesTitle: 'Half Saree Function Themes',
     themes: [
-      { name: 'Rose & Champagne',  img: 'https://images.pexels.com/photos/303468/pexels-photo-303468.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Floral Mandap',     img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Garden Engagement', img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Luxe Indoor Setup',  img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Traditional Half Saree', img: 'https://images.pexels.com/photos/18156765/pexels-photo-18156765.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Floral Stage Setup',   img: 'https://images.pexels.com/photos/57980/pexels-photo-57980.jpeg?auto=compress&cs=tinysrgb&w=800' },
+      { name: 'Family Blessings',     img: 'https://images.pexels.com/photos/11993617/pexels-photo-11993617.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
   },
   corporate: {
@@ -159,7 +158,6 @@ const EVENT_CONTENT = {
       { name: 'Traditional Grihapravesham', img: 'https://images.pexels.com/photos/6585758/pexels-photo-6585758.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Festive Marigold',            img: 'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800' },
       { name: 'Modern Minimal',              img: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800' },
-      { name: 'Green & Saffron',             img: 'https://images.pexels.com/photos/6585758/pexels-photo-6585758.jpeg?auto=compress&cs=tinysrgb&w=800' },
     ],
   },
 };
@@ -169,54 +167,54 @@ const EVENT_CONTENT = {
    --------------------------------------------------------- */
 const GALLERY = {
   wedding: [
-    { title: 'Royal Palace Wedding', loc: 'Hyderabad', guests: 1200, img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Beachside Telugu Wedding', loc: 'Vizag', guests: 600, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Garden Wedding', loc: 'Vijayawada', guests: 450, img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Minimal Mandap Wedding', loc: 'Hyderabad', guests: 300, img: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Destination Wedding', loc: 'Vizag', guests: 250, img: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Traditional Wedding', loc: 'Vijayawada', guests: 800, img: 'https://images.pexels.com/photos/2253842/pexels-photo-2253842.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Royal Palace Wedding', loc: 'Hyderabad', guests: 1200, img: 'https://images.pexels.com/photos/19439930/pexels-photo-19439930.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Beachside Telugu Wedding', loc: 'Vizag', guests: 600, img: 'https://images.pexels.com/photos/30475158/pexels-photo-30475158.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Garden Wedding', loc: 'Vijayawada', guests: 450, img: 'https://images.pexels.com/photos/12432503/pexels-photo-12432503.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Minimal Mandap Wedding', loc: 'Hyderabad', guests: 300, img: 'https://images.pexels.com/photos/32235796/pexels-photo-32235796.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Destination Wedding', loc: 'Vizag', guests: 250, img: 'https://images.pexels.com/photos/36484495/pexels-photo-36484495.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Traditional Wedding', loc: 'Vijayawada', guests: 800, img: 'https://images.pexels.com/photos/12584803/pexels-photo-12584803.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   birthday: [
-    { title: "Princess 5th Birthday", loc: 'Hyderabad', guests: 80, img: 'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Superhero Theme Party', loc: 'Vijayawada', guests: 60, img: 'https://images.pexels.com/photos/2076630/pexels-photo-2076630.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Unicorn Dream Party', loc: 'Vizag', guests: 50, img: 'https://images.pexels.com/photos/1779415/pexels-photo-1779415.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Milestone 50th Birthday', loc: 'Hyderabad', guests: 150, img: 'https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Jungle Safari Party', loc: 'Vijayawada', guests: 45, img: 'https://images.pexels.com/photos/2076629/pexels-photo-2076629.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Luxe Rooftop Birthday', loc: 'Vizag', guests: 100, img: 'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: "Princess 5th Birthday", loc: 'Hyderabad', guests: 80, img: 'https://images.pexels.com/photos/35051545/pexels-photo-35051545.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Superhero Theme Party', loc: 'Vijayawada', guests: 60, img: 'https://images.pexels.com/photos/10336829/pexels-photo-10336829.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Unicorn Dream Party', loc: 'Vizag', guests: 50, img: 'https://images.pexels.com/photos/8385012/pexels-photo-8385012.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Milestone 50th Birthday', loc: 'Hyderabad', guests: 150, img: 'https://images.pexels.com/photos/7922235/pexels-photo-7922235.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Jungle Safari Party', loc: 'Vijayawada', guests: 45, img: 'https://images.pexels.com/photos/14160871/pexels-photo-14160871.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Luxe Rooftop Birthday', loc: 'Vizag', guests: 100, img: 'https://images.pexels.com/photos/5935254/pexels-photo-5935254.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   babyshower: [
-    { title: 'Pastel Clouds Baby Shower', loc: 'Hyderabad', guests: 60, img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Twinkle Star Shower', loc: 'Vijayawada', guests: 40, img: 'https://images.pexels.com/photos/235554/pexels-photo-235554.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Pastel Clouds Baby Shower', loc: 'Hyderabad', guests: 60, img: 'https://images.pexels.com/photos/35204091/pexels-photo-35204091.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Twinkle Star Shower', loc: 'Vijayawada', guests: 40, img: 'https://images.pexels.com/photos/34154245/pexels-photo-34154245.jpeg?auto=compress&cs=tinysrgb&w=800' },
     { title: 'Lavender Dreams Shower', loc: 'Vizag', guests: 55, img: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Baby In Bloom Shower', loc: 'Hyderabad', guests: 70, img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Baby In Bloom Shower', loc: 'Hyderabad', guests: 70, img: 'https://images.pexels.com/photos/30691631/pexels-photo-30691631.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   naming: [
-    { title: 'Traditional Naming Ceremony', loc: 'Hyderabad', guests: 100, img: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Royal Baby Cradle Ceremony', loc: 'Vijayawada', guests: 80, img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Minimal Pastel Ceremony', loc: 'Vizag', guests: 50, img: 'https://images.pexels.com/photos/235554/pexels-photo-235554.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Sky Blue Cradle Ceremony', loc: 'Hyderabad', guests: 90, img: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Traditional Naming Ceremony', loc: 'Hyderabad', guests: 100, img: 'https://images.pexels.com/photos/35040453/pexels-photo-35040453.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Royal Baby Cradle Ceremony', loc: 'Vijayawada', guests: 80, img: 'https://images.pexels.com/photos/19794717/pexels-photo-19794717.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Minimal Pastel Ceremony', loc: 'Vizag', guests: 50, img: 'https://images.pexels.com/photos/12116207/pexels-photo-12116207.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Sky Blue Cradle Ceremony', loc: 'Hyderabad', guests: 90, img: 'https://images.pexels.com/photos/30665062/pexels-photo-30665062.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   anniversary: [
-    { title: 'Silver Anniversary Gala', loc: 'Hyderabad', guests: 200, img: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Golden Vows Renewal', loc: 'Vijayawada', guests: 150, img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Rooftop Candle Dinner', loc: 'Vizag', guests: 60, img: 'https://images.pexels.com/photos/2253842/pexels-photo-2253842.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Beachside Anniversary', loc: 'Vizag', guests: 80, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Silver Anniversary Gala', loc: 'Hyderabad', guests: 200, img: 'https://images.pexels.com/photos/10944977/pexels-photo-10944977.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Golden Vows Renewal', loc: 'Vijayawada', guests: 150, img: 'https://images.pexels.com/photos/7810968/pexels-photo-7810968.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Rooftop Candle Dinner', loc: 'Vizag', guests: 60, img: 'https://images.pexels.com/photos/5638834/pexels-photo-5638834.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Beachside Anniversary', loc: 'Vizag', guests: 80, img: 'https://images.pexels.com/photos/7867433/pexels-photo-7867433.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
-  engagement: [
-    { title: 'Rose & Champagne Engagement', loc: 'Hyderabad', guests: 300, img: 'https://images.pexels.com/photos/303468/pexels-photo-303468.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Floral Mandap Engagement', loc: 'Vijayawada', guests: 250, img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Garden Engagement', loc: 'Vizag', guests: 180, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Luxe Indoor Engagement', loc: 'Hyderabad', guests: 350, img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  halfsaree: [
+    { title: 'Traditional Half Saree Ceremony', loc: 'Hyderabad', guests: 120, img: 'https://images.pexels.com/photos/12584803/pexels-photo-12584803.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Family Blessings Function', loc: 'Vijayawada', guests: 150, img: 'https://images.pexels.com/photos/27960941/pexels-photo-27960941.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Floral Half Saree Event', loc: 'Vizag', guests: 90, img: 'https://images.pexels.com/photos/32593148/pexels-photo-32593148.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Elegant Ceremony Reception', loc: 'Hyderabad', guests: 110, img: 'https://images.pexels.com/photos/38302968/pexels-photo-38302968.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   corporate: [
     { title: 'Annual Award Night', loc: 'Hyderabad', guests: 800, img: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Tech Product Launch', loc: 'Vijayawada', guests: 500, img: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Leadership Conference', loc: 'Vizag', guests: 400, img: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Tech Product Launch', loc: 'Vijayawada', guests: 500, img: 'https://images.pexels.com/photos/6398745/pexels-photo-6398745.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Leadership Conference', loc: 'Vizag', guests: 400, img: 'https://images.pexels.com/photos/35042459/pexels-photo-35042459.jpeg?auto=compress&cs=tinysrgb&w=800' },
     { title: 'Team Offsite Retreat', loc: 'Hyderabad', guests: 200, img: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   housewarming: [
-    { title: 'Traditional Grihapravesham', loc: 'Hyderabad', guests: 120, img: 'https://images.pexels.com/photos/6585758/pexels-photo-6585758.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { title: 'Festive Marigold Housewarming', loc: 'Vijayawada', guests: 90, img: 'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Traditional Grihapravesham', loc: 'Hyderabad', guests: 120, img: 'https://images.pexels.com/photos/6359436/pexels-photo-6359436.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { title: 'Festive Marigold Housewarming', loc: 'Vijayawada', guests: 90, img: 'https://images.pexels.com/photos/34056583/pexels-photo-34056583.jpeg?auto=compress&cs=tinysrgb&w=800' },
     { title: 'Modern Minimal Housewarming', loc: 'Vizag', guests: 70, img: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800' },
     { title: 'Green & Saffron Ceremony', loc: 'Hyderabad', guests: 100, img: 'https://images.pexels.com/photos/6585758/pexels-photo-6585758.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
@@ -227,26 +225,26 @@ const GALLERY = {
    --------------------------------------------------------- */
 const VENUES = {
   hyderabad: [
-    { name: 'Banjara Palace',     locality: 'Banjara Hills', guests: 1200, rooms: 12, type: 'Banquet', rating: 4.9, img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Jubilee Gardens',    locality: 'Jubilee Hills', guests: 800,  rooms: 8,  type: 'Outdoor', rating: 4.7, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Hitech Convention', locality: 'Hitech City',   guests: 1500, rooms: 15, type: 'Indoor',  rating: 4.8, img: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Golkonda Resort',    locality: 'Gandipet',      guests: 600,  rooms: 20, type: 'Resort',  rating: 4.6, img: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Pearl Banquets',     locality: 'Kukatpally',     guests: 500,  rooms: 6,  type: 'Banquet', rating: 4.4, img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Charminar Lawns',    locality: 'Old City',       guests: 1000, rooms: 5,  type: 'Outdoor', rating: 4.3, img: 'https://images.pexels.com/photos/2253842/pexels-photo-2253842.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Banjara Palace',     locality: 'Banjara Hills', guests: 1200, rooms: 12, type: 'Banquet', rating: 4.9, img: 'https://images.pexels.com/photos/12572754/pexels-photo-12572754.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Jubilee Gardens',    locality: 'Jubilee Hills', guests: 800,  rooms: 8,  type: 'Outdoor', rating: 4.7, img: 'https://images.pexels.com/photos/36340623/pexels-photo-36340623.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Hitech Convention', locality: 'Hitech City',   guests: 1500, rooms: 15, type: 'Indoor',  rating: 4.8, img: 'https://images.pexels.com/photos/33161614/pexels-photo-33161614.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Golkonda Resort',    locality: 'Gandipet',      guests: 600,  rooms: 20, type: 'Resort',  rating: 4.6, img: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Pearl Banquets',     locality: 'Kukatpally',     guests: 500,  rooms: 6,  type: 'Banquet', rating: 4.4, img: 'https://images.pexels.com/photos/38302968/pexels-photo-38302968.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Charminar Lawns',    locality: 'Old City',       guests: 1000, rooms: 5,  type: 'Outdoor', rating: 4.3, img: 'https://images.pexels.com/photos/32608130/pexels-photo-32608130.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   vijayawada: [
-    { name: 'Krishnaveni Palace',  locality: 'Labbipet',     guests: 1000, rooms: 10, type: 'Banquet', rating: 4.7, img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Benz Circle Gardens', locality: 'Benz Circle',  guests: 700,  rooms: 6,  type: 'Outdoor', rating: 4.5, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'MGM Convention',     locality: 'MG Road',       guests: 1200, rooms: 12, type: 'Indoor',  rating: 4.8, img: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Riverside Resort',    locality: 'Prakasam Barrage', guests: 500, rooms: 18, type: 'Resort', rating: 4.6, img: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Vijaya Banquets',     locality: 'Governorpet',  guests: 400,  rooms: 4,  type: 'Banquet', rating: 4.3, img: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Krishnaveni Palace',  locality: 'Labbipet',     guests: 1000, rooms: 10, type: 'Banquet', rating: 4.7, img: 'https://images.pexels.com/photos/19439930/pexels-photo-19439930.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Benz Circle Gardens', locality: 'Benz Circle',  guests: 700,  rooms: 6,  type: 'Outdoor', rating: 4.5, img: 'https://images.pexels.com/photos/2079628/pexels-photo-2079628.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'MGM Convention',     locality: 'MG Road',       guests: 1200, rooms: 12, type: 'Indoor',  rating: 4.8, img: 'https://images.pexels.com/photos/2101267/pexels-photo-2101267.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Riverside Resort',    locality: 'Prakasam Barrage', guests: 500, rooms: 18, type: 'Resort', rating: 4.6, img: 'https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Vijaya Banquets',     locality: 'Governorpet',  guests: 400,  rooms: 4,  type: 'Banquet', rating: 4.3, img: 'https://images.pexels.com/photos/7244503/pexels-photo-7244503.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
   vizag: [
-    { name: 'Beach View Palace',   locality: 'Beach Road',   guests: 900,  rooms: 10, type: 'Banquet', rating: 4.8, img: 'https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Rushikonda Resorts',  locality: 'Rushikonda',   guests: 600,  rooms: 25, type: 'Resort',  rating: 4.7, img: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Dolphin Convention',  locality: 'Dwarakanagar', guests: 1100, rooms: 8,  type: 'Indoor',  rating: 4.6, img: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Seaside Lawns',       locality: 'Rishikonda',    guests: 700,  rooms: 5,  type: 'Outdoor', rating: 4.5, img: 'https://images.pexels.com/photos/2253842/pexels-photo-2253842.jpeg?auto=compress&cs=tinysrgb&w=800' },
-    { name: 'Vizag Grand Banquets',locality: 'Siripuram',     guests: 500,  rooms: 6,  type: 'Banquet', rating: 4.4, img: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Beach View Palace',   locality: 'Beach Road',   guests: 900,  rooms: 10, type: 'Banquet', rating: 4.8, img: 'https://images.pexels.com/photos/767964/pexels-photo-767964.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Rushikonda Resorts',  locality: 'Rushikonda',   guests: 600,  rooms: 25, type: 'Resort',  rating: 4.7, img: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Dolphin Convention',  locality: 'Dwarakanagar', guests: 1100, rooms: 8,  type: 'Indoor',  rating: 4.6, img: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Seaside Lawns',       locality: 'Rishikonda',    guests: 700,  rooms: 5,  type: 'Outdoor', rating: 4.5, img: 'https://images.pexels.com/photos/247931/pexels-photo-247931.jpeg?auto=compress&cs=tinysrgb&w=800' },
+    { name: 'Vizag Grand Banquets',locality: 'Siripuram',     guests: 500,  rooms: 6,  type: 'Banquet', rating: 4.4, img: 'https://images.pexels.com/photos/5477860/pexels-photo-5477860.jpeg?auto=compress&cs=tinysrgb&w=800' },
   ],
 };
 
@@ -300,7 +298,7 @@ const TESTIMONIALS = {
   vijayawada: [
     { name: 'Anusha & Vamsi',  event: 'Wedding',          rating: 5, text: 'Traditional Telugu wedding done perfectly. The floral mandap at MGM Convention was breathtaking.', img: 'https://images.pexels.com/photos/3752864/pexels-photo-3752864.jpeg?auto=compress&cs=tinysrgb&w=200' },
     { name: 'Divya K.',        event: 'Birthday',         rating: 5, text: 'My daughter\'s princess birthday was magical. The team handled everything — we just enjoyed!', img: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200' },
-    { name: 'Sai Teja',        event: 'Engagement',       rating: 4, text: 'Rose and champagne theme looked stunning. Coordination was smooth and on time.', img: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200' },
+    { name: 'Kavya S.',        event: 'Half Saree Function', rating: 5, text: 'My half saree function was elegant and joyous. The decor, lighting and family rituals were handled beautifully.', img: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200' },
   ],
   vizag: [
     { name: 'Priya & Arjun',   event: 'Wedding',          rating: 5, text: 'Beachside wedding at Rushikonda — sunset, decor and coordination all perfect. Forever grateful.', img: 'https://images.pexels.com/photos/3752864/pexels-photo-3752864.jpeg?auto=compress&cs=tinysrgb&w=200' },
@@ -317,7 +315,7 @@ const VIDEOS = [
   { title: 'Birthday Party Aftermovie',      id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800' },
   { title: 'Corporate Awards Night',          id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800' },
   { title: 'Baby Shower Film',                id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/265988/pexels-photo-265988.jpeg?auto=compress&cs=tinysrgb&w=800' },
-  { title: 'Engagement Ceremony Reel',        id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/303468/pexels-photo-303468.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { title: 'Half Saree Ceremony Reel',        id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800' },
   { title: 'Naming Ceremony Coverage',       id: 'tVj0ZUdQn5E', thumb: 'https://images.pexels.com/photos/1648387/pexels-photo-1648387.jpeg?auto=compress&cs=tinysrgb&w=800' },
 ];
 
@@ -425,9 +423,9 @@ function CITY_NAME(id) {
 function renderThemes() {
   const themes = EVENT_CONTENT[currentEvent].themes;
   const inner = $('#themesInner');
-  // group into slides of 3
+  // group into slides of 1 for mobile, 2 for tablet, 3 for desktop
   const slides = [];
-  for (let i = 0; i < themes.length; i += 3) slides.push(themes.slice(i, i + 3));
+  for (let i = 0; i < themes.length; i++) slides.push(themes.slice(i, i + 1));
   inner.innerHTML = slides.map((group, idx) => `
     <div class="carousel-item ${idx === 0 ? 'active' : ''}">
       <div class="row g-4">
@@ -588,6 +586,12 @@ function renderContact() {
   $('#contactAddress').textContent = c.address;
   $('#contactPhoneLink').textContent = c.phone;
   $('#contactPhoneLink').href = `tel:${c.phone}`;
+  const mobilePhoneLink = $('#mobilePhoneLink');
+  const mobilePhoneText = $('#mobilePhoneText');
+  if (mobilePhoneLink) {
+    mobilePhoneLink.href = `tel:${c.phone}`;
+    if (mobilePhoneText) mobilePhoneText.textContent = c.phone;
+  }
   $('#contactEmailLink').textContent = c.email;
   $('#contactEmailLink').href = `mailto:${c.email}`;
   $('#contactWhatsappLink').textContent = c.whatsapp;
