@@ -1012,6 +1012,25 @@ section.section { padding: 96px 0; }
   .offcanvas { width: 85vw; }
 }
 
+/* Force desktop view for sections below hero on mobile */
+@media (max-width: 991px) {
+  #gallery .col-lg-4,
+  #venues .col-lg-4,
+  #services .col-lg-3,
+  #stats .col-lg,
+  #booking .col-lg-5,
+  #booking .col-lg-7,
+  #contact .col-lg-6 {
+    flex: 0 0 auto;
+  }
+  #gallery .col-lg-4, #venues .col-lg-4 { width: 33.33333333%; }
+  #services .col-lg-3 { width: 25%; }
+  #stats .col-lg { width: 20%; }
+  #booking .col-lg-5 { width: 41.66666667%; }
+  #booking .col-lg-7 { width: 58.33333333%; }
+  #contact .col-lg-6 { width: 50%; }
+}
+
 /* Reduced motion 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
