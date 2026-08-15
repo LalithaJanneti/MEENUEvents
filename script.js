@@ -425,8 +425,8 @@ function renderThemes() {
   const themes = EVENT_CONTENT[currentEvent].themes;
   const inner = $('#themesInner');
   // group into slides of 1 for mobile, 2 for tablet, 3 for desktop
-  const slides = [];
-  for (let i = 0; i < themes.length; i++) slides.push(themes.slice(i, i + 1));
+  const slides = []; // Group into slides of 3 for desktop view
+  for (let i = 0; i < themes.length; i += 3) slides.push(themes.slice(i, i + 3));
   inner.innerHTML = slides.map((group, idx) => `
     <div class="carousel-item ${idx === 0 ? 'active' : ''}">
       <div class="row g-4">
