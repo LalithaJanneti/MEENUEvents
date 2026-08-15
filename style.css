@@ -505,6 +505,33 @@ section.section { padding: 96px 0; }
   50% { transform: scale(1.008); }
 }
 
+.hero-call-action {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 20px auto 0;
+  padding: 0 12px;
+}
+
+.btn-call-now {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--c-accent), var(--c-primary));
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn-call-now:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Scroll indicator */
 .scroll-indicator {
   position: absolute; bottom: 26px; left: 50%;
