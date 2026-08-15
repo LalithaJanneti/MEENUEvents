@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MEENU Events — A to Z Event Management</title>
   <meta name="description" content="Premium A to Z event management for weddings, birthdays, baby showers, naming ceremonies, corporate events and more across Hyderabad, Vijayawada and Vizag." />
 
@@ -19,7 +18,7 @@
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <!-- Custom -->
-  <link href="style.css?v=1.1" rel="stylesheet" />
+  <link href="style.css?v=1.2" rel="stylesheet" />
 </head>
 <body data-event="wedding">
   <div id="pageLoader" class="page-loader" aria-hidden="true">
@@ -36,9 +35,14 @@
         <span class="brand-text">MEENU<span class="brand-accent">Events</span></span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="ms-auto d-flex align-items-center order-lg-3">
+        <div class="nav-item ms-lg-3 nav-phone">
+          <a class="nav-link phone-link" href="tel:+918977737787"><i class="bi bi-telephone-fill me-1 d-none d-lg-inline"></i>+91 8977737787</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <div class="offcanvas offcanvas-end" id="navOffcanvas" tabindex="-1">
         <div class="offcanvas-header">
@@ -46,15 +50,12 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 order-lg-2">
             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#venues">Venues</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item ms-lg-3 nav-phone">
-              <a class="nav-link phone-link" href="tel:+918977737787"><i class="bi bi-telephone-fill me-1"></i>+91 8977737787</a>
-            </li>
             <li class="nav-item ms-lg-3">
               <a class="btn btn-consultation ripple" href="#booking">Book Consultation</a>
             </li>
