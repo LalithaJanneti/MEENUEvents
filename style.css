@@ -880,7 +880,7 @@ section.section { padding: 96px 0; }
 
 /* =========================================================
    RESPONSIVE
-   ========================================================= */
+   ========================================================= 
 @media (max-width: 991px) {
   section.section { padding: 72px 0; }
   .hero { min-height: 90vh; padding: 140px 0 60px; }
@@ -955,7 +955,8 @@ section.section { padding: 96px 0; }
   .offcanvas { width: 85vw; }
 }
 
-/* Reduced motion */
+/* Reduced motion 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+*/
