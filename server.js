@@ -1,4 +1,8 @@
 import http from 'node:http';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'node:url';
+
+dotenv.config();
 
 const bookings = [];
 const consultationClicks = [];
@@ -11,22 +15,31 @@ async function saveToSupabase(payload, tableName) {
     return null;
   }
 
-  const response = await fetch(`${supabaseUrl}/rest/v1/${tableName}`, {
+  // Ensure the URL is constructed correctly, even if SUPABASE_URL has a trailing slash or path.
+  const baseUrl = new URL(supabaseUrl);
+  const finalUrl = new URL(`/rest/v1/${tableName}`, baseUrl);
+  const response = await fetch(finalUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'apikey': supabaseKey,
       'Authorization': `Bearer ${supabaseKey}`,
-      'Prefer': 'return=representation'
+      'Prefer': 'return=minimal'
     },
     body: JSON.stringify(payload)
   });
 
   if (!response.ok) {
-    throw new Error(`Supabase request failed with status ${response.status}`);
+    const errorBody = await response.text();
+    console.error('Supabase error response:', errorBody);
+    throw new Error(`Supabase request failed with status ${response.status}: ${errorBody}`);
   }
 
-  return response.json();
+  // With 'return=minimal', Supabase returns an empty body on success.
+  // Avoid parsing it as JSON.
+  const responseText = await response.text();
+  if (responseText) return JSON.parse(responseText);
+  return null;
 }
 
 function sendJson(res, statusCode, payload) {
@@ -81,23 +94,14 @@ export async function startServer({ port = 3000 } = {}) {
     if (req.method === 'POST' && requestUrl.pathname === '/api/bookings') {
       try {
         const payload = await parseJsonBody(req);
-        const booking = {
-          id: `${Date.now()}-${bookings.length + 1}`,
-          name: payload.name || '',
-          phone: payload.phone || '',
-          email: payload.email || '',
-          city: payload.city || '',
-          event: payload.event || '',
-          date: payload.date || '',
-          guests: payload.guests || '',
-          message: payload.message || '',
-          createdAt: new Date().toISOString()
-        };
-
-        bookings.push(booking);
-        await saveToSupabase(booking, 'bookings');
-        sendJson(res, 201, { message: 'Booking received', booking });
+        // The payload from the form is the booking data.
+        // Let Supabase handle the ID and createdAt timestamp.
+        bookings.push(payload);
+        const supabaseResponse = await saveToSupabase(payload, 'bookings');
+        console.log('Successfully saved booking to Supabase:', supabaseResponse);
+        sendJson(res, 201, { message: 'Booking received', booking: payload });
       } catch (error) {
+        console.error('Failed to save booking to Supabase:', error);
         sendJson(res, 400, { error: error.message || 'Unable to process booking' });
       }
       return;
@@ -106,18 +110,14 @@ export async function startServer({ port = 3000 } = {}) {
     if (req.method === 'POST' && requestUrl.pathname === '/api/consultation-clicks') {
       try {
         const payload = await parseJsonBody(req);
-        const click = {
-          id: `${Date.now()}-${consultationClicks.length + 1}`,
-          source: payload.source || 'unknown',
-          label: payload.label || 'Book Consultation',
-          page: payload.page || 'unknown',
-          createdAt: new Date().toISOString()
-        };
-
-        consultationClicks.push(click);
-        await saveToSupabase(click, 'consultation_clicks');
-        sendJson(res, 201, { message: 'Consultation click recorded', click });
+        // The payload from the frontend is the click data.
+        // Let Supabase handle the ID and createdAt timestamp.
+        consultationClicks.push(payload);
+        const supabaseResponse = await saveToSupabase(payload, 'consultation_clicks');
+        console.log('Successfully recorded click to Supabase:', supabaseResponse);
+        sendJson(res, 201, { message: 'Consultation click recorded', click: payload });
       } catch (error) {
+        console.error('Failed to record click to Supabase:', error);
         sendJson(res, 400, { error: error.message || 'Unable to record consultation click' });
       }
       return;
@@ -127,13 +127,14 @@ export async function startServer({ port = 3000 } = {}) {
   });
 
   await new Promise((resolve) => {
-    server.listen(port, () => resolve());
+    server.listen(port, '0.0.0.0', () => resolve());
   });
 
   return server;
 }
 
-if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
+// Check if the script is being run directly
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const port = Number(process.env.PORT || 3000);
   startServer({ port }).then(() => {
     console.log(`Backend running on http://localhost:${port}`);
